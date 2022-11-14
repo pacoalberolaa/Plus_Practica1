@@ -17,9 +17,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btVerificar = findViewById(R.id.btVerificar)
-        btVerificar.setOnClickListener {}
+        btVerificar.setOnClickListener { enviarBienvenida() }
         edPassword= findViewById(R.id.edPassword)
     }
 
+    fun enviarBienvenida(){
+        val password = "123456$";
+        if (edPassword.text.toString().equals(password)){
+            val intent = Intent(this, BienvenidaActivity::class.java)
+            startActivity(intent)
 
+        }else{
+            Toast.makeText(this, getString(R.string.msj_clave), Toast.LENGTH_LONG).show()
+
+        }
+    }
 }

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Plus_Practica1</string>
+    <string name="msj_clave">Clave erronea!!!!</string>
+
 </resources>
